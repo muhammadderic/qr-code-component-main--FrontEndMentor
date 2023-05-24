@@ -16,16 +16,12 @@
       width: 1440px;
       margin: 0;
       padding: 0;
-      font-family: 'Outfit', sans-serif;
-      background-color: hsl(212, 45%, 89%);
-      box-sizing: border-box;
-    }
-
-    .container {
-      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      font-family: 'Outfit', sans-serif;
+      background-color: hsl(212, 45%, 89%);
+      box-sizing: border-box;
     }
 
     .qrCodeWrapper {
@@ -52,30 +48,70 @@
     }
 
     .attribution {
-      width: 1440px;
+      width: 100%;
+      height: 10px;
       font-size: 11px;
       text-align: center;
       position: absolute;
+      bottom: 0;
     }
 
     .attribution a {
       color: hsl(228, 45%, 44%);
     }
+
+    @media (max-width: 1025px) {
+      body {
+        width: 1025px;
+      }
+
+      .qrCodeWrapper {
+        width: 25%;
+      }
+    }
+
+    @media (max-width: 769px) {
+      body {
+        width: 769px;
+      }
+
+      .qrCodeWrapper {
+        width: 33%;
+      }
+    }
+
+    @media (max-width: 481px) {
+      body {
+        width: 480px;
+      }
+
+      .qrCodeWrapper {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 376px) {
+      body {
+        width: 375px;
+      }
+
+      .qrCodeWrapper {
+        width: 70%;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="qrCodeWrapper">
-      <img class="qrCodeImg" src="./images/image-qr-code.png" alt="qr code">
-      <h1 class="qrCodeTitle">
-        Improve your front-end skills by building projects
-      </h1>
+  <div class="qrCodeWrapper">
+    <img class="qrCodeImg" src="./images/image-qr-code.png" alt="qr code">
+    <h1 class="qrCodeTitle">
+      Improve your front-end skills by building projects
+    </h1>
 
-      <p class="qrCodeText">
-        Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-      </p>
-    </div>
+    <p class="qrCodeText">
+      Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+    </p>
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
